@@ -16,7 +16,22 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.http import HttpResponse
+
+# HTTP Resquest <-> HTTP Reponse
+# MVT (Model view template) -> a view vai decidir o que vai fazer com os dados
+
+def my_view(request):
+    print('posso fazer outras coisas')
+    return HttpResponse('Uma mensage para alguém especial')
+
+def meu_blog(request):
+    print()
+    return HttpResponse('Esta é minha página do meu blog.')
 
 urlpatterns = [
+    # path('nome_do_caminho/', view->)
     path('admin/', admin.site.urls),
+    path('blog/', my_view),
+    path('meu_blog/', meu_blog)
 ]
