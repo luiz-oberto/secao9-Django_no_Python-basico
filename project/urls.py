@@ -17,23 +17,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.http import HttpResponse
+from home import views
+from blog import views as blog_Views
 
 #   cliente           servidor
 # HTTP Resquest <-> HTTP Reponse (é stateless)
 # MVT (Model view template) -> a view vai decidir o que vai fazer com os dados  
 
-def home(request):
-    print('home')
-    return HttpResponse('home.')
-
-def blog(request):
-    print('my_view')
-    return HttpResponse('my_view')
-
 
 urlpatterns = [
     # path('nome_do_caminho/', view->)
-    path('', home),
-    path('blog/', blog),
+    path('', views.home),
+    path('blog/', blog_Views.blog),
     path('admin/', admin.site.urls),
 ]
