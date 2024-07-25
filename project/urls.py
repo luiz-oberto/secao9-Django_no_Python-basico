@@ -18,20 +18,22 @@ from django.contrib import admin
 from django.urls import path
 from django.http import HttpResponse
 
-# HTTP Resquest <-> HTTP Reponse
-# MVT (Model view template) -> a view vai decidir o que vai fazer com os dados
+#   cliente           servidor
+# HTTP Resquest <-> HTTP Reponse (é stateless)
+# MVT (Model view template) -> a view vai decidir o que vai fazer com os dados  
 
-def my_view(request):
-    print('posso fazer outras coisas')
-    return HttpResponse('Uma mensage para alguém especial')
+def home(request):
+    print('home')
+    return HttpResponse('home.')
 
-def meu_blog(request):
-    print()
-    return HttpResponse('Esta é minha página do meu blog.')
+def blog(request):
+    print('my_view')
+    return HttpResponse('my_view')
+
 
 urlpatterns = [
     # path('nome_do_caminho/', view->)
+    path('', home),
+    path('blog/', blog),
     path('admin/', admin.site.urls),
-    path('blog/', my_view),
-    path('meu_blog/', meu_blog)
 ]
