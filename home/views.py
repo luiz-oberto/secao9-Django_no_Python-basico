@@ -1,7 +1,9 @@
-from django.http import HttpResponse
-# from django.shortcuts import render
+from django.shortcuts import render
+# o Render é feito para renderizar alguns templates
 
 
 def home(request):
     print('home')
-    return HttpResponse('Home do app 1')
+    return render(
+        request,
+        'home/index.html')
