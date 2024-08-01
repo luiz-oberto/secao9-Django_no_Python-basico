@@ -6,4 +6,8 @@ def home(request):
     print('home')
     return render(
         request,
-        'home/index.html')
+        'home/index.html',
+        context={
+            'text': 'Olá home' 
+        }
+    )
