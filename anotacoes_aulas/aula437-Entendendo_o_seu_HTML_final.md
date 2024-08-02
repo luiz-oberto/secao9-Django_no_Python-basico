@@ -1,3 +1,8 @@
+# Entendendo o seu HTML final + adicionando CSS aos posts
+- obs: blocks não funcionam dentro de includes
+Nesta aula vamos estilizar um pouco o nosso site, segue o código css:
+
+~~~css
 /* Reset */
 *,
 *:after,
@@ -35,3 +40,4 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
   }
 }
+~~~
