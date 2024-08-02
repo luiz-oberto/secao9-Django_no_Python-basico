@@ -1,13 +1,26 @@
 {% include "global/partials/head.html" %}
 {% include "global/partials/menu.html" %}
 
-<!-- aqui nesse bloco ele vai colocar o título da página de acordo com a URL -->
-<h1>{% block texto %}{% endblock texto %}</h1>
+{% if text %}
+    <h1>{% block texto %}{% endblock texto %}</h1>
+{% endif %}
+
+{% if 1 %}
+
+{% elif 1 %}
+
+{% elif 1 %}
+
+{% elif 1 %}
+
+{% elif 1 %}
+
+{% else %}
+
+{% endif %}
 
 <main class="content">
-    <!-- aqui ele expõe os posts da página -->
     {% block posts %}{% endblock posts %}
-    <!-- aqui ele vai colocar tod e qualquer conteúdo que estiver vindo de index.html de home -->
     {% block home %}{% endblock home %}
 </main>
 
