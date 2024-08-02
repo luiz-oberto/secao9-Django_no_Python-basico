@@ -1,3 +1,9 @@
 {% extends "global/base.html" %}
 
 {% block texto %} {{ text }} {% endblock texto %} 
+
+{% comment %} aqui estamos puxado o bloco de posts do index.html do app blog. {% endcomment %}
+{% block posts %}
+    {% include "global/partials/postblock.html" %}
+{% endblock posts %}
+
