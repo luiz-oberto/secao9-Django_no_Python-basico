@@ -1,3 +1,8 @@
+# Estilizando o CSS da nav de menu
+
+Segue o código de estilo:
+
+~~~CSS
 /* Reset */
 *,
 *:after,
@@ -62,3 +67,4 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
   }
 }
+~~~

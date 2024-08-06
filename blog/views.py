@@ -9,7 +9,7 @@ def blog(request):
 
     context = {
         'posts': posts,
-        'text': 'Olá Blog',
+        # 'text': 'Olá Blog',
     }
     
     return render(
