@@ -123,7 +123,8 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'base' / 'static'
 ]
-
+# variável usada para dizer para qual pasta os arquivos estáticos serão movimentados ao dar o comando collectstatic
+STATIC_ROOT = BASE_DIR / 'static_files'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
